@@ -70,7 +70,8 @@ body:after {
   .btn.btn-primary {
     background: #007bff;
     border-color: #007bff;
-    color: #fff; }
+    color: #fff;
+  margin-top: 40%; }
     .btn.btn-primary:hover {
       background: #000;
       border-color: #000;
