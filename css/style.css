@@ -379,7 +379,7 @@ body:after {
           margin-top: 0px;
           visibility: visible;
           opacity: 1; }
-
+.row mb-5
 .site-mobile-menu {
   width: 300px;
   position: fixed;
@@ -2026,3 +2026,8 @@ figure figcaption {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+ .inline {
+  list-style-type: none; 
+}
+  
