@@ -1,24 +1,19 @@
 <?php
-    $name = $_POST['name'];
-    $visitor_email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+//variable setting
+$name = $_REQUEST['name'];
+$email = $_REQUEST['Email'];
+$subject = $_REQUEST['Subject'];
+$message = $_REQUEST['Message'];
 
-    $email_from = 'RockIT';
+//check input fields
+if (empty($name) || empty($email) || empty($subject) || empty($message))
+{
+    echo "Please fill all the fields";
+}
+else 
+{
+    mail("therockitpad07@gmail.com", "RockIT Message", $message, "From: $name <$email>");
+    echo "<script type='text/javascript'>alert('Your message sent successfully');window.history.log(-1);</script>";
+}
 
-    $email_subject = "New Email";
-
-    $email_body = "User Name: $name.\n".
-                    "User Email: $visitor_email.\n".
-                        "User Message: $message.\n";
-
-    $to = "therockitpad07@gmail.com";
-
-    $headers = "From: $email_from \r\n";
-
-    $headers .= "Reply-To: $visitor_email \r\n";
-
-    mail($to,$email_subject,$email_body,$headers);
-
-    header("Location: index.html");
 ?>
